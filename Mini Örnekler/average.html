@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average</title>
+</head>
+<body style="background-color: rgb(158, 132, 128);">
+    <label>Number 1:</label><input type="text" id="one"><br><br>
+    <label>Number 2:</label><input type="text" id="two"><br><br>
+    <label>Number 3:</label><input type="text" id="three"><br><br>
+    <label>Sonuç:</label><span type="text" id="sonuc"></span><br><br>
+    <button type="button" id="operation">Github</button>
+    
+    <script>
+        let n1, n2,n3, button, result;
+        n1 = document.getElementById("one");
+        n2 = document.getElementById("two");
+        n3 = document.getElementById("three");
+        button = document.getElementById("operation");
+        result = document.getElementById("sonuc");
+
+        n1.addEventListener('input',average);
+        n2.addEventListener('input',average);
+        n3.addEventListener('input',average);
+        function average(){
+            let numberOne=Number(n1.value);
+            let numberTwo=Number(n2.value);
+            let numberThree=Number(n3.value);
+            result.innerHTML="Average: " + ((numberOne + numberTwo + numberThree)/3);
+        }
+        button.onclick=function button(){
+            window.open ("https://github.com/slckerdogan", "_blank")
+        }
+    </script>
+    
+</body>
+</html>

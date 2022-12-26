@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faiz Hesaplama</title>
+    <style>
+        body {
+            font-size: larger;
+            background-color: darkkhaki;
+            color: saddlebrown;
+            font-weight: bold;
+        }
+
+        button {
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            font-size: large;
+            font-weight: bold;
+        }
+
+        select {
+            height: 40px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body onload="yillar();">
+    <h3 style="text-align: center; color: black;">TAŞIT VERGİSİ HESAPLAMA</h3>
+    <form action="index.html" id="vergiForm" style="text-align: center;">
+
+        <label for="aracTipi">Lütfen araç tipini seçiniz:</label>
+        <select name="" id="aracTipi">
+            <option value="default">Araç Tipi Seçiniz</option>
+            <option value="motosiklet">Motosiklet</option>
+            <option value="otomobil">Otomobil</option>
+        </select>
+        <br><br>
+
+        <label for="motorGucu">Lütfen aracın motor gücünü seçiniz:</label><br><br>
+        <input type="radio" name="motorGucu" id="option1" value="999 cc altı">
+        <label for="option1">999 cc altı</label>
+        <input type="radio" name="motorGucu" id="option2" value="1000cc-1600cc arası">
+        <label for="option2">1000 cc - 1600cc</label>
+        <input type="radio" name="motorGucu" id="option3" value="1601 cc- 2000 cc arası">
+        <label for="option3">1601 cc- 2000 cc</label>
+        <input type="radio" name="motorGucu" id="option4" value="2001cc">
+        <label for="option4">2001cc</label>
+        <br><br><br>
+
+        <label for="aracModel">Lütfen arac model yılını seçiniz:</label>
+        <select name="" id="aracModel" style="width: 100px;">
+            <option value="default">Yıl seçiniz</option>
+        </select><br><br>
+        <button type="button" id="hesapla" onclick="vergiHesabı()">Hesapla</button>
+    </form>
+    <h5 id="sonuc" style="text-align: center; font-size: larger;"></h5>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ODD or EVEN</title>
+</head>
+
+<body>
+    <label>Please enter a number:</label><input type="text" id="number" placeholder="Please enter a number"><br><br>
+    <label>Value:</label><span type="text" id="value"></span><br><br>
+    <button type="button" id="operator">Odd or Even</button>
+    <button type="button" id="info">More Information</button>
+    <button type="button" id="go">Github</button>
+
+    <script>
+        let n,button,button2,button3,situation;
+        n = document.querySelector("#number");
+        button = document.querySelector("#operator");
+        button2=document.querySelector("#info");
+        button3=document.querySelector("#go");
+        situation=document.querySelector("#value");
+        button.onclick = function () {
+            let number = Number(n.value);
+            if (isNaN(number) || number==="") {
+                window.alert("ERROR");
+                document.bgColor="white"
+            }
+            else {
+                if (number %2 ==0) {
+                    situation.innerHTML="Number is Even!";
+                    document.bgColor="tomato"
+                }
+                else {
+                    situation.innerHTML="Number is Odd!";
+                    document.bgColor="green"
+                }
+            }
+
+        }
+        button2.onclick=function(){
+            window.location.href="https://www.theschoolrun.com/what-are-odd-and-even-numbers#:~:text=An%20even%20number%20is%20a,%2C%205%2C%207%2C%209."
+        }
+        button3.onclick=function(){
+            window.open ("https://github.com/slckerdogan", "_blank")
+        }
+
+
+    </script>
+</body>
+
+</html>

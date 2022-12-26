@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number</title>
+</head>
+<body>
+    <label>Random Number:</label><span type="text" id="sonuc" disabled></span><br><br>
+    <button type="button" id="one">Please click and see the random number 0-100</button>
+
+    <script>
+        let result=document.querySelector("#sonuc");
+        let button=document.querySelector("#one");
+        button.onclick=function(){
+            result.innerHTML=Math.round(Math.random()*100);
+        }
+    </script>
+</body>
+</html>

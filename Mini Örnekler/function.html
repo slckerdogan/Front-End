@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daire Alanı ve Cevresi</title>
+</head>
+<body>
+    <script>
+        let r=prompt("Lutfen yarıçap giriniz: ");
+
+        function hesap(r){
+            cevre=2 * Math.PI * r;
+            alan= Math.PI * r * r;
+            return cevre,alan;
+        }
+    hesap(r)
+    alert("Dairenin çevresi: " + Math.round(cevre) + " ve Dairenin alanı: " + Math.round(alan));
+    document.bgColor="black";
+    </script>
+</body>
+</html>

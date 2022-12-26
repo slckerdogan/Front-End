@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kütüphane Uygulamasi</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+    <style>
+        .success, .remove{
+          color: white;
+          padding: 5px;
+          margin: 5px 0 15px 0;
+        }
+    
+        .success {
+          background: green;
+        }
+        
+        .remove{
+          background: darkblue;
+        }
+      </style>
+</head>
+<body>
+    <div id="container">
+        <h3 class="baslik">KÜTÜPHANEMİZE EKLEME ALANI</h3>
+        <form id="formKitap">
+            <label for="kitapAdi">Kitap Adi</label>
+            <input type="text" name="" id="kitapAdi">
+    
+            <label for="kitapYazari">Kitap Yazari</label>
+            <input type="text" name="" id="kitapYazari">
+    
+            <label for="kitapISBN">ISBN No:</label>
+            <input type="text" name="" id="kitapISBN">
+
+            <input type="submit" value="Kitap Ekle" id="btnEkle">
+        </form>
+
+
+    
+        <span>  <!--!JS ile buraya form elemanından alacağımız verileri atacağız-->
+            <table id="kitapListesi">
+                <tr>
+                    <th>Kitap Adi</th>
+                    <th>Kitap Yazari</th>
+                    <th>Kitap ISBN No</th>
+                    <th></th>
+                </tr>
+            </table>
+        </span>
+    </div>
+    <h5 id="toplamKitap"></h5>
+    <script src="script.js"></script>
+</body>
+</html>

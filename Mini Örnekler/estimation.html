@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estimation</title>
+</head>
+
+<body>
+    <label>Please enter a number</label><br><br><input type="text" id="number"><br><br>
+    <label>Situation:</label><span type="text" id="value"></span><br><br>
+    <button type="button" id="go">Hadi Bir Sayı Gir</button>
+    <button type="button" id="result" disabled>Doğru Sayıyı Gör</button>
+
+    <script>
+        let n, button,button2, situation;
+        n = document.querySelector("#number");
+        button = document.querySelector("#go");
+        button2 = document.querySelector("#result");
+        situation = document.querySelector("#value");
+        button.onclick = () => {
+            button2.disabled=false;
+            let number = Math.round(Math.random() * 100);
+            console.log(number);
+            button.onclick = () => {
+                if (isNaN(n.value) || (n.value < 0) || (n.value === "")) {
+                    situation.innerHTML = "Please enter a number 0-100!";
+                }
+                else if (n.value > number) {
+                    situation.innerHTML = "Please enter a smaller number!";
+                }
+                else if (n.value < number) {
+                    situation.innerHTML = "Please enter a bigger number!";
+                }
+                else {
+                    situation.innerHTML = "Congratualations!";
+                }
+            }
+            button2.onclick=()=>{
+                situation.innerHTML="Correct number is " + number;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

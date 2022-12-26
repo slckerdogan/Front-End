@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürün Siparis Formu</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body onload="UrunAdediSayisi(); UrunTaksidiSayisi();">
+    <h3>Ürün Siparis Formu</h3>
+    <form action="#" id="formUrun" style="margin-bottom: 20px;">
+        <label for="Uruntipi">Ürün Tipi Seçimi</label>
+        <span>
+            <input type="radio" name="Uruntipi" id="ErkekUrunleri" value="E" onchange="urunlerigoster();">
+            <label>Erkek Ürünleri</label>
+            <input type="radio" name="Uruntipi" id="KadınUrunleri" value="K" onchange="urunlerigoster();">
+            <label>Kadın Ürünleri</label>
+        </span>
+
+        <label for="UrunListesi">Ürün Seçimi</label>
+        <select name="Ürün Listesi" id="UrunListesi" size="10"></select> <!--Ürün listesi JS ile işleniyor-->
+
+        <label for="UrunAdedi">Adet Seçimi</label>
+        <select name="Ürün Listesi" id="UrunAdedi"></select> <!--Ürün adedi seçenekleri JS ile işleniyor-->
+
+        <label for="UrunTaksit">Taksit Seçimi</label>
+        <select name="" id="UrunTaksit"></select> <!--Ürün taksit seçenekleri JS ile işleniyor-->
+
+        <input type="button" value="Toplam Tutarı Hesapla" id="btnToplam" onclick="tutarHesapla();">
+    </form>
+    <form action="#" id="formUrun" style="border: none;">
+        <label for="BirimFiyat" style="border: none; text-align: end; padding: 10px;">Birim Fiyat Tutarı:</label>
+        <input type="text" name="" id="BirimFiyat" disabled>
+
+        <label for="AraTutar" style="border: none; text-align: end; padding: 10px;">Ara Toplam Tutarı:</label>
+        <input type="text" name="" id="AraTutar" disabled>
+
+        <label for="KargoTutar" style="border: none; text-align: end; padding: 10px;">Kargo Toplam Tutarı:</label>
+        <input type="text" name="" id="KargoTutar" disabled>
+    </form>
+    <h4 id="result">Toplam Tutar Miktarı:</h4>
+    <h4><a href="#"><button type="button" onclick="Ode();">Öde</button></a></h4>
+</body>
+</html>

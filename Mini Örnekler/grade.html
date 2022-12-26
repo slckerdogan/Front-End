@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade</title>
+</head>
+<body style="background-color: rgb(158, 132, 128);">
+    <label>Vize:</label><input type="text" id="one"><br><br>
+    <label>Vize:</label><input type="text" id="two"><br><br>
+    <label>Final:</label><input type="text" id="three"><br><br>
+    <label>Sonuç:</label><span type="text" id="sonuc"></span><br><br>
+    <button type="button" id="topla">Hesapla</button>
+    
+    <script>
+        let n1, n2,n3, button, result;
+        n1 = document.getElementById("one");
+        n2 = document.getElementById("two");
+        n3 = document.getElementById("three");
+        button = document.getElementById("topla");
+        result = document.getElementById("sonuc");
+        button.onclick=function(){
+            let number1 = Number(n1.value);
+            let number2 = Number(n2.value);
+            let number3 = Number(n3.value);
+            if (isNaN(number1) || isNaN(number2) || isNaN(number3) || number1==="" || number2==="" || number3==="") {
+                window.alert("ERROR");
+            }
+            else{
+                let sum=(number1*0.25)+(number2*0.25)+(number3*0.5);
+                if (sum>90 && sum<=100){
+                    result.innerHTML="AA ile Geçtiniz... Puanınız: " + sum;
+                }
+                else if (sum>80 && sum<=90){
+                    result.innerHTML="BA ile Geçtiniz... Puanınız: " + sum;
+                }
+                else if (sum>70 && sum<=80){
+                    result.innerHTML="BB ile Geçtiniz... Puanınız: " + sum;
+                }
+                else if (sum>60 && sum<=70){
+                    result.innerHTML="CB ile Geçtiniz... Puanınız: " + sum;
+                }
+                else if (sum>50 && sum<=60){
+                    result.innerHTML="DC ile Geçtiniz... Puanınız: " + sum;
+                }
+                else if (sum>=45 && sum<=50){
+                    result.innerHTML="DD ile Geçtiniz... Puanınız: " + sum;
+                }
+                else{
+                    result.innerHTML="Kaldınız... Puanınız: " + sum;
+                }    
+            }
+            
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditions</title>
+</head>
+
+<body>
+    <p style="text-align:center;">
+        1.sayı:<span id="one"></span><br><br>
+        2.sayı:<span id="two"></span><br><br>
+        3.sayı:<span id="three"></span><br><br>
+    </p>
+    <script>
+        var n1, n2, n3, number1, number2, number3;
+
+        n1 = document.querySelector("#one")
+        number1 =prompt ("Please enter a number: ");
+        n1.innerHTML = number1;
+        n2 = document.querySelector("#two")
+        number2 =prompt ("Please enter a number: ");
+        n2.innerHTML = number2;
+        n3 = document.querySelector("#three")
+        number3 =prompt ("Please enter a number: ");
+        n3.innerHTML = number3;
+        n1 = parseInt(n1);
+        n2 = parseInt(n2);
+        n3 = parseInt(n3);
+
+        if (number1 > number2 && number1 > number3) {
+            alert("En büyük sayı: " + number1);
+            document.bgColor="purple"
+        }
+        else if ((number2 > number1 && number2 > number3)) {
+            alert("En büyük sayı: " + number2);
+            document.bgColor="green"
+        }
+        else {
+            alert("En büyük sayı: " + number3);
+            document.bgColor="red"
+        }
+    </script>
+</body>
+
+</html>

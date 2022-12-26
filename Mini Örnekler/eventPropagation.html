@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propagation</title>
+    <style>
+        #one {
+            top:50px;
+            position: absolute;
+            width: 1000px;
+            height: 500px;
+            background-color: aqua;
+
+        }
+
+        #two {
+            top:50px;
+            margin-left: 50px;
+            position: relative;
+            background-color: blueviolet;
+            width: 600px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="one">
+        <div id="two">  
+        </div>
+    </div>
+
+    <script>
+        let first=document.querySelector("#two");
+        let second=document.querySelector("#one");
+
+        first.addEventListener('click',clickFirst);
+
+        function clickFirst(event){ //event yazmakta amaç Propagation fonksiyonunu çağırmak
+           alert("Welcome!");
+           event.stopPropagation(); //fonksiyon istenileni yapınca durur bu sayede ve başka işlere girişmez
+        };
+
+        second.addEventListener('click',clickSecond);
+
+        function clickSecond(event){ //event yazmakta amaç Propagation fonksiyonunu çağırmak
+            alert("See You!");
+            event.stopPropagation(); //fonksiyon istenileni yapınca durur bu sayede ve başka işlere girişmez
+        };
+    </script>
+</body>
+
+</html>

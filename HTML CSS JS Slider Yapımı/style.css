@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}*
+button:focus{
+    outline: 0;
+}
+
+.slider{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity .4s linear;
+}
+
+.active{
+    opacity: 1;
+}
+
+.slide:nth-child(1){
+    background: url(images/news-1172463_960_720.jpg) no-repeat center/cover;
+}
+.slide:nth-child(2){
+    background: url(images/basketball-court-4158462_960_720.jpg) no-repeat center/cover;
+}
+.slide:nth-child(3){
+    background: url(images/football-stadium-3404535_960_720.jpg) no-repeat center/cover;
+}
+.slide:nth-child(4){
+    background: url(images/audience-1866738_960_720.jpg) no-repeat center/cover;
+}
+
+.slide .inner{
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
+    background-color: wheat;
+    color: coral;
+    padding: 1rem;
+    opacity: 0;
+}
+
+.slide.active .inner{
+    opacity: 1;
+}
+
+.indicators{
+    position:absolute;
+    bottom: 20px;
+    right: 20px;
+    cursor: default;
+}
+
+.indicators button{
+    padding: 1rem;
+    color: wheat;
+    background-color: coral;
+}

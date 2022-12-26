@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color</title>
+    <style>
+        #one{
+            text-align: center;       
+        }
+    </style>
+</head>
+<body>
+    <div id="one">
+        <button value="Red" onclick="changecolor('red')">Red</button> <!--red ile olacak arka plan rengini fonksiyon ile aktardık-->
+        <button value="White" onclick="changecolor('white')">White</button> <!--white ile olacak arka plan rengini fonksiyon ile aktardık-->
+    </div>
+    <hr>
+    <p id="one">Merhaba arka plana bağlı olarak benim rengim <span id="second"></span></strong></p>
+    <script>
+        function changecolor(color){ //red veya white parameterleri html kısmından geldiği için fonksiyonumuz parametreli fonksiyon oldu ve parametreyle html kısmından aldığımız rengi arka plana atamış olduk
+            document.bgColor=color;
+            let name=document.querySelector("#second")
+            name.innerHTML=color + " biçiminde";
+        }
+    </script>
+</body>
+</html>

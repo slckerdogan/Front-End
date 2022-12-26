@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Slider</title>
+</head>
+<body>
+    <h1>Merhabalar</h1>
+    <img name="slide" width="500" height="300">
+    <script>
+        let i=0;
+        let images=['https://picsum.photos/200/300','https://picsum.photos/200', 'https://picsum.photos/id/237/200/300']; //slide için tutacağımmız resimleri dizi olarak ayarladık
+        let duration=3000; //bir resmin ekranda kalma süresini ayarladık
+
+        function slidechange(){
+            document.slide.src = images[i];
+            if(i<images.length-1){
+                i++;
+            }
+            else{
+                i=0;
+            }
+            setTimeout("slidechange()",duration);//resim kendini 3 saniye gösterdi ve siradakine geçti
+        }
+        window.onload=slidechange;//pencere açildigi anda fonksiyon aktif oldu ve açilan slide kısmına resimlerden show olustu
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypothenuse</title>
+    <style>
+        .danger{
+            color:red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <label>First Edge</label><br><input type="text" id="one"><br><br>
+    <label>Second Edge</label><br><input type="text" id="two"><br><br>
+    <label>Result:</label><span type="text" id="result" class="danger"></span><br><br>
+    <button type="button" id="multiple">Calculate</button>
+
+    <script>
+        let e1,e2,button,result;
+        e1=document.getElementById("one");
+        e2=document.getElementById("two");
+        button=document.getElementById("multiple");
+        result=document.getElementById("result");
+
+        button.onclick=()=>{
+            let number1=Number(e1.value);
+            let number2=Number(e2.value);
+            if(isNaN(number1)|| isNaN(number2)|| number1==="" || number2==="" || number1<=0 || number2<=0){
+                window.alert("ERROR! Please try again!");
+            }
+            else{
+                let sum=Math.sqrt((number1**2) + (number2**2));
+                result.innerHTML=sum;
+            }
+        }
+    </script>
+</body>
+</html>
