@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benzinlik</title>
+</head>
+
+<body style="background-color: beige;">
+    <div
+        style="text-align: center; background-color: wheat; border: 5px solid saddlebrown; box-sizing: border-box; margin: auto; padding:15px">
+        <label for="">Lütfen yakıt tipini seçiniz</label><br><br>
+        <input type="radio" name="yakit" id="option1" value="Dizel">
+        <label for="option1">Dizel</label>
+        <input type="radio" name="yakit" id="option2" value="Benzin">
+        <label for="option2">Benzin</label>
+        <input type="radio" name="yakit" id="option3" value="LPG">
+        <label for="option3">LPG</label>
+        <br><br>
+        <label>Lütfen almak istediğiniz benzin miktarını giriniz</label><br><br>
+        <input type="text" id="miktar">
+        <button id="buton">Depoyu Doldur</button>
+        <h5><span id="info"></span></h5>
+    </div>
+
+    <script>
+        let yakit, miktar, buton,para;
+        miktar = document.getElementById("miktar");
+        buton = document.getElementById("buton");
+
+        buton.onclick = function () {
+            for (let i = 0; i < document.getElementsByName("yakit").length; i++) {
+                if (document.getElementsByName("yakit")[i].checked) {
+                    yakit = document.getElementsByName("yakit")[i].value;
+                }
+            }
+            if (yakit == "Dizel") {
+                para = Number(miktar.value) * 25;
+                document.querySelector("#info").innerHTML = "Toplam tutarınız " + para + " TL";
+            }
+            else if (yakit == "Benzin") {
+                para = Number(miktar.value) * 28;
+                document.querySelector("#info").innerHTML = "Toplam tutarınız " + para + " TL";
+            }
+            else if (yakit == "LPG") {
+                para = Number(miktar.value) * 20;
+                document.querySelector("#info").innerHTML = "Toplam tutarınız " + para + " TL";
+            }
+            else {
+                alert("Lütfen yakıt türünü seçtiğinizden emin olunuz!");
+                document.getElementById("info").innerHTML = "";
+                location = location;
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
