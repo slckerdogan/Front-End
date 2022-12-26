@@ -1,0 +1,85 @@
+div.container {
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+}
+
+div.sol {
+    width: 15%;
+    float: left;
+    background-color: burlywood;
+    border-radius: 8px;
+}
+
+div.sag {
+    width: 45%;
+    float: right;
+    margin-right: 15px;
+    background-color: blanchedalmond;
+    border-radius: 8px;
+}
+
+div.orta {
+    width: 30%;
+    float: left;
+    margin-left: 25px;
+    background-color: cadetblue;
+    border-radius: 8px;
+}
+
+table,
+tr,
+td,
+th {
+    border-collapse: collapse;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    color: blueviolet;
+}
+
+table {
+    font-size: large;
+    width: 100%;
+}
+
+th {
+    color: black;
+}
+
+#add {
+    background-color: rgb(196, 27, 27);
+    color: white;
+    border-radius: 5px;
+    width: 80%;
+    height:50px;
+    position: relative;
+    display: inline-block;
+    font-size:auto;
+    font-display: inherit;
+}
+
+#added {
+    background-color: rgb(194, 81, 143);
+    color: rgb(252, 225, 225);
+    font-display: inherit;
+    border-radius: 5px;
+    width: 80%;
+    height:50px;
+    position: relative;
+    display: inline-block;
+    font-size: auto;
+
+}
+
+label {
+    font-size: large;
+    color: teal;
+    font-weight: bolder;
+}
+
+input {
+    width: 80%;
+    position: relative;
+    height:20px;
+}

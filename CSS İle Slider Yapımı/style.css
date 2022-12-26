@@ -1,0 +1,72 @@
+body{
+    background-color: wheat;
+
+}
+
+.slider-tas{
+    width: 200px;
+    height: 300px;
+    border: 5px solid black;
+    margin-left: 50px;
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+li{
+    position: absolute;
+}
+
+/*?li:nth-of-type ile left aracılığıyla atadığımız px ifadeleri resimlerin sayfa üzerinde olan en baştaki konumunu ifade ediyor*/
+li:nth-of-type(1){
+    left:0px;
+}
+li:nth-of-type(2){
+    left:205px;
+}
+li:nth-of-type(3){
+    left:410px;
+}
+li:nth-of-type(4){
+    left:615px;
+}
+
+.slider{
+    position:absolute;
+    left: 0px;
+
+    animation-name: slider;
+    animation-duration: 12s;
+    animation-delay: 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.slider:hover{
+    animation-play-state:paused;
+}
+
+li:hover{
+    transform: scale(1.1);
+}
+
+
+/*?aşağıdaki kod bloğu slaytın ilerleme sürecindeki yüzdelik dilimlerde olacağı konumu belirtiyor*/
+@keyframes slider{
+    0%{left:0px;}
+
+    10%{left:-205px;}
+    30%{left:-205px;}
+
+    50%{left:-410px;}
+    70%{left:-410px;}
+
+    90%{left:-615px;}
+    100%{left:-615px;}
+}

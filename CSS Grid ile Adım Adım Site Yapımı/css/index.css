@@ -1,0 +1,267 @@
+*{
+    margin:0;
+    padding: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+}*
+
+body{
+    display: grid;
+    grid-template-areas:"header" "article" "footer";
+    height: 2000px;
+    grid-template-rows: 150px 1fr 200px;
+    
+}
+
+#header{
+    grid-area: header;
+    background: url(../images/news-1172463_960_720.jpg) white;
+    background-size: 22%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    border: none;
+}
+
+#content{
+    grid-area: article;
+    display: grid;
+    grid-template-rows:3fr 7fr;
+    border: none;
+}
+
+#article{
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows:50px 3fr 4fr 3fr ;
+    grid-gap: 1rem;
+    margin: 3vw;
+    margin-bottom: 1rem;
+    border: none;
+}
+
+#article>div:nth-child(1){
+    grid-column: 1 / 4;
+}
+#article>div:nth-child(2){
+    grid-column: 1 / 3;
+    display: flex;
+    flex-direction: column;
+}
+#article>div:last-child{
+    grid-column-start: 4;
+    grid-column-end: 2;
+}
+#article>div{
+    border:none;
+}
+#footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 3fr 1fr;
+    background: black;
+    border:none;
+}
+
+#footer div:first-child{
+    margin-left: 3vw;
+}
+#footer div:nth-child(3){
+    margin-right: 3vw;
+}
+.copyright{
+    grid-column: 1/span 3;
+    text-align: center;
+    background: black;
+    border: none;
+    color: white;
+    padding-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-weight: bold;
+}
+
+div{
+    border:thin solid black;
+}
+
+#header>a{
+    color: coral;
+    margin: 0.6rem;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+#header>a:hover{
+    color: cadetblue;
+}
+
+#header>ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin-left:5vw;
+
+}
+
+#header>ul li{
+    margin:0.5rem;
+}
+#header>ul li a{
+    text-decoration: none;
+    background-color: coral;
+    text-align: center;
+    padding: 0.50rem;
+    color: wheat;
+    font-size: larger;
+    font-family: 'Aldrich';
+}
+
+#header>ul li a:hover{
+    background-color: cadetblue;
+}
+
+#header>ul li a:active{
+    background-color: gray;
+}
+
+.intro{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    border: none;
+}
+
+.haberAlani{
+    flex: 0 0 30%;
+    border: none;
+    margin-left:5vw;
+    margin-top: 2vw;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro:before{
+    content: " ";
+    background: url(../images/football-stadium-3404535_960_720.jpg) no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity:0.4;
+}
+
+.haberAlani h3{
+    display: block;
+    font-family: 'Aclonica';
+    font-size: x-large;
+    padding: 10px;
+}
+.haberAlani h5{
+    display: block;
+    font-family: 'Aclonica';
+    padding: 10px;
+    font-size: large;
+}
+
+.haberAlani p{
+    font-family: 'Abel';
+    font-size: large;
+}
+.haberAlani a.btn{
+    display: block;
+    width: 8rem;
+    background-color: aliceblue;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    margin-top: 0.2rem;
+    margin-right:4rem ;
+    padding: 10px;
+    font-family: 'Abril Fatface';
+    font-size: large;
+
+}
+.articleAreaHeader{
+    padding: 15px;
+    background-color: antiquewhite;
+    color:darkgreen;
+}
+
+#article .articleArea img{
+   height: 280px;
+   float: left;
+   margin: 0.5rem
+}
+
+#article .articleArea #football{
+    background: burlywood;
+    padding: 10px;
+}
+#article .articleArea #basketball{
+    background: burlywood;
+    padding: 10px;
+}
+#article .articleArea #volleyball{
+    background: burlywood;
+    padding: 10px;
+}
+
+.footerArea{
+    padding-top: 0.5rem;
+    background: none;
+    border: none;
+    background: black;
+}
+
+.footerArea p{
+    font-size:1.2rem;
+    color:white;
+}
+
+.footerArea h3{
+    color:white;
+    font-size: 2rem;
+}
+
+.footerArea form#iletisimForm{
+    display: flex;
+    flex-direction: column;
+}
+
+.footerArea form button{
+    background-color: coral;
+    padding: 0.2rem 0;
+    margin: 0.2rem 0;
+    font-weight: bold;
+    color: wheat;
+    border-radius: 5rem;
+}
+
+.footerArea ul{
+    list-style-type: none;
+    font-weight: bold;
+    color: rgb(153, 51, 51);
+}
+
+.footerArea ul li{
+    font-size: 1.2rem;
+    padding: 0.2rem 0;
+    margin: 0.2rem 0;
+}
+
+.footerArea a.üyelikbtn{
+    display: block;
+    background: coral;
+    padding: 0.4rem 0;
+    margin: 0.2rem 0;
+    text-align: center;
+    text-decoration: none;
+    color: wheat;
+    border-radius: 5rem;
+}
