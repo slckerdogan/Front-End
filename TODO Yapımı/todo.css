@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background: linear-gradient(to right, #dfabc5 0%, #1da1f2 100%);
+    display: grid;
+    place-items: center;
+}
+
+#body {
+    height: 75vh;
+    margin-top: 5%;
+}
+
+.container {
+    background-color: bisque;
+    max-width: 700px;
+    width: 100%;
+    padding: 25px 30px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.container:first-child{
+    height: 220px;
+}
+
+h2 {
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+label {
+    font-size: 20px;
+}
+
+#button{
+    position: relative;
+}
+
+#ekle {
+    width: 25%;
+    height: 60px;
+    cursor: pointer;
+    font-size: 23px;
+    background-color: cadetblue;
+    font-weight: bolder;
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+}
+
+#sil {
+    width: 25%;
+    height: 60px;
+    cursor: pointer;
+    font-size: 23px;
+    background-color: cadetblue;
+    font-weight: bolder;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+}
+
+#ara {
+    width: 25%;
+    height: 60px;
+    cursor: pointer;
+    font-size: 23px;
+    background-color: cadetblue;
+    font-weight: bolder;
+    position: absolute;
+    left: 50%;
+    margin-left: 100px;
+}
+
+input {
+    position: relative;
+    margin-left: 25%;
+    margin-right:25%;
+}
+
+input[type="text"] {
+    width: 50%;
+    height: 45px;
+    font-size: 23px;
+    background-color: antiquewhite;
+    text-align: center;
+    vertical-align: middle;
+}
+
+input[type="text"]:hover {
+    border: 3px solid red;
+}
+
+.aaa{
+    text-align: center;
+    font-size: 30px;
+    color: chocolate;
+    margin: 0;
+    cursor: pointer;
+    text-transform: capitalize;
+}
