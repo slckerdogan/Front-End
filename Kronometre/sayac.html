@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kronometre</title>
+  <link rel="stylesheet" href="sayac.css">
+</head>
+
+<body>
+
+  <h1>Geri Sayan Kronometre Ama Pomodoro Timer'da Olur</h1>
+
+  <label>Gün:
+    <input type="text" id="days">
+  </label>
+
+  <label>Saat:
+    <input type="text" id="hours">
+  </label>
+
+  <label>Dakika:
+    <input type="text" id="minutes">
+  </label>
+
+  <label>Saniye:
+    <input type="text" id="seconds">
+  </label>
+
+  <br><br>
+
+  <button onclick="sureyiSay()">Başlat</button>
+  <button onclick="sureyiDurdur()">Durdur</button>
+  <button onclick="sureyiResetle()">Sıfırla</button>
+
+  <p id="zamanAlani"></p>
+
+  <script src="sayac.js"></script>
+
+</body>
+
+</html>
