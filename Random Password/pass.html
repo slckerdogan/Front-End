@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password</title>
+    <link rel="stylesheet" href="pass.css">
+</head>
+<body>
+    <div class="container">
+        <div id="title">
+            <h1 style="text-align: center; color: cadetblue;">Random Password Generation Section</h1>
+        </div>
+        <div style="border: 5px solid saddlebrown; text-align: center; box-sizing: border-box; margin: auto; padding:15px">
+            <label class="font">Lütfen şifre özelliklerinizi seçiniz</label><br><br>
+
+            <label>Şifreniz kaç karakter olsun?</label>
+            <input type="text" id="length"><br>
+            
+            <label for="uppercase">Büyük Harf Olsun Mu?</label>
+            <input type="checkbox" name="" id="uppercase"><br>
+
+            
+            <label for="lowercase">Küçük Harf Olsun Mu?</label>
+            <input type="checkbox" name="" id="lowercase"><br>
+
+            
+            <label for="symbol">Sembol veya Rakam Olsun Mu?</label>
+            <input type="checkbox" name="" id="symbol">
+
+
+            <br><br>
+
+
+            <button id="buton">Şifreyi Oluştur</button><br><br>
+            <h5><span id="info"></span></h5>
+        </div>
+    </div>
+
+
+    <script src="pass.js"></script>
+</body>
+</html>
