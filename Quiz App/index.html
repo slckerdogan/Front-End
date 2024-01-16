@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="quiz_container">
+        <h2 id="quizOrder"></h2>
+        <div class="quizProgressContainer">
+            <div class="quizProgress"></div>
+        </div>
+
+        <div class="questionBody">
+            <div id="questionContainer"></div>
+        </div>
+
+        <button class="quizBtn" onclick="nextQuestion()">NEXT</button>
+    </div>
+
+    <div class="quizModal">
+        <div class="quizModalBody">
+            <div class="modalClose" onclick="closeModal()">X</div>
+            <div class="congrats">Congratulations!!!!<br>Good Job!!!</div>
+            <p class="modalText">
+                You have <span id="totalCorrectChoice"></span> correct answers
+            </p>
+            <button class="quizBtnn" onclick="repeatQuiz()">REPEAT QUİZ</button>
+        </div>
+    </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
